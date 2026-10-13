@@ -31,8 +31,8 @@ static double FuelCost(double miles, double milesPerGallon, double pricePerGallo
 {
     double gallons = miles / milesPerGallon;
     return gallons * pricePerGallon;
+    
 }
-
 
 static double PizzasEach (double pizzaCount, double pizzaSlice, double nameLength)
 {
@@ -46,10 +46,12 @@ static double CostPerPerson (double trip, double nameLength)
     return cost;
 }
 
-double tripTotal = gallons + pizzaCost;
+double fuel = FuelCost(260, 28, 2.89);
+
+double tripTotal = fuel + pizzaCost;
 
 Console.WriteLine("=== Part 1: The Trip ===");
-Console.WriteLine("Fuel cost: " + gallons);
+Console.WriteLine("Fuel cost: " + fuel);
 Console.WriteLine("Pizza cost: " + pizzaPrice);
 Console.WriteLine("Trip total: " + tripTotal);
 Console.WriteLine("=== Part 2: The Group ===");
