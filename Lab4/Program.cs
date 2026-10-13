@@ -15,7 +15,7 @@ Console.WriteLine("What is the price per pizza? ");
 double pizzaPrice = Convert.ToDouble(Console.ReadLine());
 
 
-const int pizzaSlice = '8';
+const int pizzaSlice = 8;
 double pizzaCost = pizzaCount * pizzaPrice;
 
 /* Paycheck */
@@ -40,15 +40,14 @@ double tripTotal = fuel + pizzaCost;
 double pizzaSlices = pizzaCount / pizzaSlice;
 double totalCost = tripTotal / nameLength;
 
-
 Console.WriteLine("=== Part 1: The Trip ===");
-Console.WriteLine("Fuel cost: " + fuel);
-Console.WriteLine("Pizza cost: " + pizzaPrice);
-Console.WriteLine("Trip total: " + tripTotal);
+Console.WriteLine("Fuel cost: " + fuel.ToString("C"));
+Console.WriteLine("Pizza cost: " + pizzaPrice.ToString("C"));
+Console.WriteLine("Trip total: " + tripTotal.ToString("C"));
 Console.WriteLine("=== Part 2: The Group ===");
 Console.WriteLine("People going: " + nameLength);
 Console.WriteLine("Slices each: " + pizzaSlices);
-Console.WriteLine("Cost per person: " + totalCost);
+Console.WriteLine("Cost per person: " + totalCost.ToString("C"));
 
 /* static double TakeHomePay(double hours, double hourlyRate, double taxRate);
 
