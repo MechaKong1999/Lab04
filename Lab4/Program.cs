@@ -34,6 +34,19 @@ static double FuelCost(double miles, double milesPerGallon, double pricePerGallo
     
 }
 
+static double TakeHomePay(double hoursWorked, double hourlyRate, double taxRate)
+{
+    double grossPay = hoursWorked * hourlyRate;
+    double taxWithheld = grossPay * taxRate;
+    return grossPay - taxWithheld;
+}
+
+static double HoursToCover(double totalCost, double takeHomePerHour)
+{
+    double totalHours = totalCost * takeHomePerHour;
+    return totalHours;
+}
+
 
 double fuel = FuelCost(260, 28, 2.89);
 double tripTotal = fuel + pizzaCost;
@@ -49,8 +62,5 @@ Console.WriteLine("People going: " + nameLength);
 Console.WriteLine("Slices each: " + pizzaSlices);
 Console.WriteLine("Cost per person: " + totalCost.ToString("C"));
 
-/* static double TakeHomePay(double hours, double hourlyRate, double taxRate);
 
 
-static double HoursToCover(double amountOwed, double takeHomePerHour);
-*/
