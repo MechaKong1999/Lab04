@@ -93,6 +93,7 @@ double tripTotal = fuel + pizzaCost;
 double pizzaSlices = pizzaCount / pizzaSlice;
 double totalCost = tripTotal / nameLength;
 double takeHomePerHour = TakeHomePay(hoursWorked, hourlyRates, taxRate);
+double hoursNeeded = HoursToCover(totalCost, takeHomePerHour);
 
 Console.WriteLine("=== Part 1: The Trip ===");
 Console.WriteLine("Fuel cost: " + fuel.ToString("C"));
@@ -103,6 +104,5 @@ Console.WriteLine("People going: " + nameLength);
 Console.WriteLine("Slices each: " + pizzaSlices);
 Console.WriteLine("Cost per person: " + totalCost.ToString("C"));
 Console.WriteLine("=== Part 3: Who Works How Long? ===");
-Console.WriteLine();
-
-
+Console.WriteLine(takeHomePerHour);
+Console.WriteLine(hoursNeeded);
